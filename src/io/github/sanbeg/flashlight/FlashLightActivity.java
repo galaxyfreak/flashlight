@@ -20,19 +20,12 @@ public class FlashLightActivity extends Activity {
     @Override
     public void onResume() {
         super.onResume();
-        flash.open();
-
+        
         ToggleButton the_button = (ToggleButton) findViewById(R.id.flashlightButton);
         if (the_button.isChecked()) {
             flash.on();
             the_button.setKeepScreenOn(true);
         }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        flash.close();
     }
 
     public void onToggleClicked(View v) {
